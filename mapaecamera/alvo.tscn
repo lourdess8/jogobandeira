@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbrkoehjv3pth"]
+
+[ext_resource type="Script" uid="uid://ck5d2rkaaok8j" path="res://alvo.gd" id="1_q2vq5"]
+
+[node name="alvo" type="Area2D"]
+script = ExtResource("1_q2vq5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Parabéns!! UHULLL"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
